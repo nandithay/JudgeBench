@@ -1,0 +1,478 @@
+[
+  {
+    "id": "factual_qa-01",
+    "category": "factual_qa",
+    "split": "dev",
+    "prompt": "What is the chemical symbol for gold?",
+    "reference": "Au",
+    "checklist": [
+      "Identify Au, not Ag."
+    ],
+    "provenance": "https://www.rsc.org/periodic-table/element/79/gold"
+  },
+  {
+    "id": "factual_qa-02",
+    "category": "factual_qa",
+    "split": "dev",
+    "prompt": "Which planet is closest to the Sun?",
+    "reference": "Mercury",
+    "checklist": [
+      "Name Mercury."
+    ],
+    "provenance": "https://science.nasa.gov/mercury/"
+  },
+  {
+    "id": "factual_qa-03",
+    "category": "factual_qa",
+    "split": "dev",
+    "prompt": "What is the SI base unit of electric current?",
+    "reference": "The ampere (A).",
+    "checklist": [
+      "Name ampere; do not substitute volt or watt."
+    ],
+    "provenance": "https://www.bipm.org/en/measurement-units/si-base-units"
+  },
+  {
+    "id": "factual_qa-04",
+    "category": "factual_qa",
+    "split": "dev",
+    "prompt": "How many bits are in one byte under the modern eight-bit definition?",
+    "reference": "8 bits.",
+    "checklist": [
+      "Answer eight bits."
+    ],
+    "provenance": "Author-curated computing definition; eight-bit byte explicitly stipulated."
+  },
+  {
+    "id": "factual_qa-05",
+    "category": "factual_qa",
+    "split": "test",
+    "prompt": "What is the capital of Australia?",
+    "reference": "Canberra.",
+    "checklist": [
+      "Name Canberra, not Sydney or Melbourne."
+    ],
+    "provenance": "https://www.australia.gov.au/"
+  },
+  {
+    "id": "factual_qa-06",
+    "category": "factual_qa",
+    "split": "test",
+    "prompt": "In DNA, which base normally pairs with adenine?",
+    "reference": "Thymine (T).",
+    "checklist": [
+      "Answer thymine; uracil is the RNA distractor."
+    ],
+    "provenance": "https://www.genome.gov/genetics-glossary/Base-Pair"
+  },
+  {
+    "id": "factual_qa-07",
+    "category": "factual_qa",
+    "split": "test",
+    "prompt": "At one standard atmosphere, what is pure water's boiling point in degrees Celsius?",
+    "reference": "Approximately 100 degrees Celsius.",
+    "checklist": [
+      "Give approximately 100 C under the specified pressure."
+    ],
+    "provenance": "Author-curated elementary physical reference; pressure and purity specified."
+  },
+  {
+    "id": "factual_qa-08",
+    "category": "factual_qa",
+    "split": "test",
+    "prompt": "Which process lets plants convert light energy into chemical energy?",
+    "reference": "Photosynthesis.",
+    "checklist": [
+      "Name photosynthesis."
+    ],
+    "provenance": "Author-curated elementary biology reference."
+  },
+  {
+    "id": "factual_qa-09",
+    "category": "factual_qa",
+    "split": "test",
+    "prompt": "In a relational database, what does a primary key uniquely identify?",
+    "reference": "A row (record) in a table.",
+    "checklist": [
+      "Identify a row within a table; a key may use multiple columns."
+    ],
+    "provenance": "Author-curated relational database definition."
+  },
+  {
+    "id": "factual_qa-10",
+    "category": "factual_qa",
+    "split": "test",
+    "prompt": "What does HTTP status code 404 indicate?",
+    "reference": "The requested resource was not found (or its existence is not disclosed).",
+    "checklist": [
+      "Explain Not Found; do not call it an authentication or server-crash status."
+    ],
+    "provenance": "https://www.rfc-editor.org/rfc/rfc9110.html#name-404-not-found"
+  },
+  {
+    "id": "reasoning-01",
+    "category": "reasoning",
+    "split": "dev",
+    "prompt": "A shirt costs $80. It is discounted by 25%, then a 10% tax is applied to the discounted price. What is the total? Show the calculation.",
+    "reference": "$80 * 0.75 = $60; $60 * 1.10 = $66.",
+    "checklist": [
+      "Apply discount before tax.",
+      "Show calculation and $66 total."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "reasoning-02",
+    "category": "reasoning",
+    "split": "dev",
+    "prompt": "All zors are blue. Some blue things are round. Must some zors be round? Explain.",
+    "reference": "No. The round blue things need not be zors.",
+    "checklist": [
+      "Reject the invalid inference.",
+      "Explain why overlap is not guaranteed."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "reasoning-03",
+    "category": "reasoning",
+    "split": "dev",
+    "prompt": "A train travels 120 km in 2 hours and 60 km in 1 hour. What is its average speed for the entire trip?",
+    "reference": "180 km / 3 h = 60 km/h.",
+    "checklist": [
+      "Use total distance divided by total time.",
+      "Answer 60 km/h."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "reasoning-04",
+    "category": "reasoning",
+    "split": "dev",
+    "prompt": "Three fair coins are tossed independently. What is the probability of exactly two heads? Explain.",
+    "reference": "3/8: HHT, HTH, THH out of eight equally likely outcomes.",
+    "checklist": [
+      "Answer 3/8 or 0.375.",
+      "Give a valid combinatorial or enumeration explanation."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "reasoning-05",
+    "category": "reasoning",
+    "split": "test",
+    "prompt": "A has 5 more books than B. Together they have 29 books. How many does each have? Show your reasoning.",
+    "reference": "B + (B+5)=29, so B=12 and A=17.",
+    "checklist": [
+      "A has 17, B has 12.",
+      "Respect both sum and difference."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "reasoning-06",
+    "category": "reasoning",
+    "split": "test",
+    "prompt": "A bag has 3 red and 2 blue balls. Draw two without replacement. What is the probability both are red?",
+    "reference": "(3/5)*(2/4)=3/10.",
+    "checklist": [
+      "Use without-replacement probabilities.",
+      "Answer 0.3 or 3/10."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "reasoning-07",
+    "category": "reasoning",
+    "split": "test",
+    "prompt": "A task needs 12 worker-hours. Three workers work at equal, constant rates with no overhead. How long does it take?",
+    "reference": "12 / 3 = 4 hours.",
+    "checklist": [
+      "Answer 4 hours under the given assumptions."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "reasoning-08",
+    "category": "reasoning",
+    "split": "test",
+    "prompt": "A clock reads 09:45. What time is it 130 minutes later, using 24-hour format?",
+    "reference": "11:55.",
+    "checklist": [
+      "Add 2 hours and 10 minutes correctly.",
+      "Use 11:55."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "reasoning-09",
+    "category": "reasoning",
+    "split": "test",
+    "prompt": "Every successful job has a log. Job X has a log. Does that prove X succeeded? Explain.",
+    "reference": "No. A log is necessary under the premise but not sufficient; unsuccessful jobs may also have logs.",
+    "checklist": [
+      "Do not affirm the consequent.",
+      "Explain necessary versus sufficient, in any wording."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "reasoning-10",
+    "category": "reasoning",
+    "split": "test",
+    "prompt": "An item rises in price by 20%, then falls by 20%. Relative to the original price, what is the net percentage change? Show an example.",
+    "reference": "A 4% decrease: 100 -> 120 -> 96.",
+    "checklist": [
+      "Apply multiplicative changes.",
+      "State 4% decrease and show a valid example."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "summarization-01",
+    "category": "summarization",
+    "split": "dev",
+    "prompt": "Summarize in two sentences.\n\nSource passage:\nThe fictional town of Luma will pilot electric buses on two routes in June. The trial lasts six months. Existing fares will stay the same. A decision about expansion will follow a review of reliability and costs.",
+    "reference": "Luma will trial electric buses on two routes for six months starting in June, without changing fares. Expansion depends on a review of reliability and costs.",
+    "checklist": [
+      "Two sentences.",
+      "Include routes, timing, unchanged fares, and conditional expansion."
+    ],
+    "provenance": "Original fictional passage authored for JudgeBench; reference checked against passage, not a real-world finding."
+  },
+  {
+    "id": "summarization-02",
+    "category": "summarization",
+    "split": "dev",
+    "prompt": "Summarize the result and its main limitation in at most 40 words.\n\nSource passage:\nA fictional team tested a cache on 100 requests. Median latency fell from 200 ms to 120 ms. Error rates were unchanged. The team has not measured performance under peak load.",
+    "reference": "In a 100-request test, caching reduced median latency from 200 to 120 ms without changing error rates; peak-load performance remains untested.",
+    "checklist": [
+      "Include latency improvement and unchanged errors.",
+      "Mention untested peak load.",
+      "At most 40 whitespace-separated words."
+    ],
+    "provenance": "Original fictional passage authored for JudgeBench; reference checked against passage, not a real-world finding."
+  },
+  {
+    "id": "summarization-03",
+    "category": "summarization",
+    "split": "dev",
+    "prompt": "Give a one-sentence summary.\n\nSource passage:\nA fictional library extended Saturday hours from 4 pm to 7 pm. Weekday hours did not change. The extension is funded for three months by a local grant, after which attendance will be reviewed.",
+    "reference": "The library extended Saturday hours to 7 pm for a three-month grant-funded trial, leaving weekdays unchanged and planning an attendance review.",
+    "checklist": [
+      "One sentence.",
+      "Preserve temporary funding, Saturday-only change, and review."
+    ],
+    "provenance": "Original fictional passage authored for JudgeBench; reference checked against passage, not a real-world finding."
+  },
+  {
+    "id": "summarization-04",
+    "category": "summarization",
+    "split": "dev",
+    "prompt": "Summarize in exactly two bullet points.\n\nSource passage:\nThe fictional Orchard app release adds offline notes. Sync occurs when a connection returns. Photo attachments are not available offline. The release is rolling out gradually over two weeks.",
+    "reference": "- Orchard is gradually rolling out offline notes over two weeks, with sync when connectivity returns.\n- Photo attachments are not supported offline.",
+    "checklist": [
+      "Exactly two bullets.",
+      "Mention rollout, reconnection sync, and photo limitation."
+    ],
+    "provenance": "Original fictional passage authored for JudgeBench; reference checked against passage, not a real-world finding."
+  },
+  {
+    "id": "summarization-05",
+    "category": "summarization",
+    "split": "test",
+    "prompt": "Summarize in at most 35 words.\n\nSource passage:\nA fictional school surveyed 80 students about a later start time. Fifty supported it, twenty opposed it, and ten were undecided. No schedule change has been approved. Staff feedback will be collected next.",
+    "reference": "Of 80 surveyed students, 50 favored a later start, 20 opposed it, and 10 were undecided; no change is approved, and staff feedback is next.",
+    "checklist": [
+      "Preserve survey counts.",
+      "Do not imply approval.",
+      "Mention staff feedback and obey 35-word cap."
+    ],
+    "provenance": "Original fictional passage authored for JudgeBench; reference checked against passage, not a real-world finding."
+  },
+  {
+    "id": "summarization-06",
+    "category": "summarization",
+    "split": "test",
+    "prompt": "Summarize in two sentences without adding predictions.\n\nSource passage:\nA fictional store's revenue grew by 10% last quarter while profit fell by 5%. Management attributed the profit decline to higher shipping costs. It plans to renegotiate delivery contracts but has not projected savings.",
+    "reference": "Revenue rose 10% last quarter, but profit fell 5%, which management attributed to shipping costs. It plans to renegotiate delivery contracts, with no savings forecast yet.",
+    "checklist": [
+      "Distinguish revenue and profit.",
+      "Attribute the explanation to management.",
+      "Two sentences, no invented savings."
+    ],
+    "provenance": "Original fictional passage authored for JudgeBench; reference checked against passage, not a real-world finding."
+  },
+  {
+    "id": "summarization-07",
+    "category": "summarization",
+    "split": "test",
+    "prompt": "Summarize the finding and why causal conclusions are limited in two sentences.\n\nSource passage:\nA fictional study assigned 60 volunteers to use a reminder app for four weeks. Participants reported missing fewer tasks. There was no control group, and outcomes were self-reported. Researchers called for a controlled trial.",
+    "reference": "Sixty volunteers reported missing fewer tasks after four weeks using reminders. Without a control group and with self-reported outcomes, the study cannot establish causality, so a controlled trial was recommended.",
+    "checklist": [
+      "Describe reported improvement and sample/duration.",
+      "Include no control and self-report limits.",
+      "Avoid claiming the app caused improvement."
+    ],
+    "provenance": "Original fictional passage authored for JudgeBench; reference checked against passage, not a real-world finding."
+  },
+  {
+    "id": "summarization-08",
+    "category": "summarization",
+    "split": "test",
+    "prompt": "Summarize the practical travel information in at most 45 words.\n\nSource passage:\nThe fictional city of Vale will close the east bridge for maintenance on Sunday from 6 am to noon. Pedestrians may use the west walkway. Buses will follow a posted detour. Emergency access will remain available.",
+    "reference": "Vale's east bridge closes Sunday, 6 am-noon, for maintenance; pedestrians can use the west walkway, buses take a posted detour, and emergency access remains open.",
+    "checklist": [
+      "Include closure timing, pedestrian route, bus detour, emergency access.",
+      "At most 45 words."
+    ],
+    "provenance": "Original fictional passage authored for JudgeBench; reference checked against passage, not a real-world finding."
+  },
+  {
+    "id": "summarization-09",
+    "category": "summarization",
+    "split": "test",
+    "prompt": "Summarize cause, impact, and remediation in exactly three bullets.\n\nSource passage:\nThe fictional Nimbus service outage began at 10:00 and ended at 10:25. An expired certificate blocked logins. Existing sessions continued to work. Engineers renewed the certificate and added expiry alerts.",
+    "reference": "- An expired certificate caused a 25-minute outage from 10:00 to 10:25.\n- New logins were blocked, but existing sessions worked.\n- Engineers renewed the certificate and added expiry alerts.",
+    "checklist": [
+      "Exactly three bullets.",
+      "Include cause, login-only impact, timing, and both remediations."
+    ],
+    "provenance": "Original fictional passage authored for JudgeBench; reference checked against passage, not a real-world finding."
+  },
+  {
+    "id": "summarization-10",
+    "category": "summarization",
+    "split": "test",
+    "prompt": "Summarize both the improvement and concern in two sentences.\n\nSource passage:\nA fictional recycling pilot collected 12 tonnes of material in May, up from 8 tonnes in April. Contamination increased from 5% to 9%. Organizers will add sorting signs before deciding whether to expand the pilot.",
+    "reference": "Collected recycling rose from 8 tonnes in April to 12 in May, while contamination increased from 5% to 9%. Organizers will add sorting signs before deciding on expansion.",
+    "checklist": [
+      "Preserve collection and contamination numbers.",
+      "Expansion is undecided; signs are planned.",
+      "Two sentences."
+    ],
+    "provenance": "Original fictional passage authored for JudgeBench; reference checked against passage, not a real-world finding."
+  },
+  {
+    "id": "instruction_following-01",
+    "category": "instruction_following",
+    "split": "dev",
+    "prompt": "Return only a JSON object with keys 'city' and 'country' for Paris, France. Use double quotes and no Markdown fences.",
+    "reference": "{\"city\":\"Paris\",\"country\":\"France\"}",
+    "checklist": [
+      "Valid JSON object, exactly two requested keys and values.",
+      "No prose or code fences."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "instruction_following-02",
+    "category": "instruction_following",
+    "split": "dev",
+    "prompt": "Sort these integers ascending and output only a comma-separated list: 9, -2, 5, 0, 5.",
+    "reference": "-2,0,5,5,9",
+    "checklist": [
+      "Correct order with duplicate 5 retained.",
+      "Only comma-separated integers; surrounding whitespace is acceptable."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "instruction_following-03",
+    "category": "instruction_following",
+    "split": "dev",
+    "prompt": "Explain a database index in exactly two sentences for a beginner. Do not use the words 'tree' or 'hash'.",
+    "reference": "An index helps a database find rows quickly without checking every row. It uses extra storage and can make writes slower.",
+    "checklist": [
+      "Exactly two sentences; beginner language.",
+      "Neither forbidden word appears, case-insensitive whole-word match.",
+      "Accurate explanation of an index."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "instruction_following-04",
+    "category": "instruction_following",
+    "split": "dev",
+    "prompt": "Give exactly three bullet points naming renewable energy sources. Each bullet must contain only the source name.",
+    "reference": "- Solar\n- Wind\n- Hydropower",
+    "checklist": [
+      "Exactly three bullets with renewable sources.",
+      "Only source names in bullets; valid alternatives accepted."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "instruction_following-05",
+    "category": "instruction_following",
+    "split": "test",
+    "prompt": "Translate 'Good morning' into Spanish. Output only the translation.",
+    "reference": "Buenos días",
+    "checklist": [
+      "Correct Spanish translation; terminal punctuation acceptable.",
+      "No explanation or other text."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "instruction_following-06",
+    "category": "instruction_following",
+    "split": "test",
+    "prompt": "From 'Maya bought 3 apples and Leo bought 5 pears', extract people and quantities. Return only JSON: an array of objects with keys name and quantity. Do not include fruit names.",
+    "reference": "[{\"name\":\"Maya\",\"quantity\":3},{\"name\":\"Leo\",\"quantity\":5}]",
+    "checklist": [
+      "Valid JSON array with two objects and numeric quantities.",
+      "Correct name/quantity pairs, exactly requested keys, no fruit names or fences."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "instruction_following-07",
+    "category": "instruction_following",
+    "split": "test",
+    "prompt": "Write a polite one-sentence request to reschedule a meeting. Include the exact phrase 'next Tuesday' and do not apologize.",
+    "reference": "Could we please reschedule our meeting to next Tuesday?",
+    "checklist": [
+      "One polite sentence.",
+      "Includes exact case-sensitive phrase next Tuesday.",
+      "No apology; valid alternatives accepted."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "instruction_following-08",
+    "category": "instruction_following",
+    "split": "test",
+    "prompt": "Classify each as fruit or vegetable in the everyday culinary sense: apple, carrot, banana. Return exactly three lines in that order, each formatted item: category.",
+    "reference": "apple: fruit\ncarrot: vegetable\nbanana: fruit",
+    "checklist": [
+      "Exactly three lines, original order and specified format.",
+      "Correct culinary categories."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "instruction_following-09",
+    "category": "instruction_following",
+    "split": "test",
+    "prompt": "Return the first five positive even integers as a JSON array, with no other text.",
+    "reference": "[2,4,6,8,10]",
+    "checklist": [
+      "Valid JSON array [2,4,6,8,10].",
+      "No other text or fences."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  },
+  {
+    "id": "instruction_following-10",
+    "category": "instruction_following",
+    "split": "test",
+    "prompt": "Summarize 'The deployment failed because its configuration file was missing' in exactly six words. Preserve the cause.",
+    "reference": "Missing configuration file caused deployment failure.",
+    "checklist": [
+      "Exactly six whitespace-separated words.",
+      "Preserve missing configuration file as cause; accept alternative six-word paraphrases."
+    ],
+    "provenance": "Author-created task; reference derived from the supplied information."
+  }
+]

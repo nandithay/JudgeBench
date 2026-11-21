@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "judgebench-local"
+version = "0.1.0"
+description = "A small, reproducible lab for LLM judge reliability and calibration"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.2,<3", "pydantic>=2.8,<3", "scikit-learn>=1.5,<2",
+  "matplotlib>=3.9,<4", "streamlit>=1.40,<2",
+  "groq>=0.15,<2", "google-genai>=1.0,<3"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+judgebench = "judgebench.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["judgebench*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
